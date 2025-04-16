@@ -1,0 +1,75 @@
+/* Change navigation links to black */
+.nav-pills .nav-link {
+    color: black !important; /* Ensures text is black */
+    position: relative; /* Needed for the underline effect */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Style the active link with a persistent underline */
+.nav-pills .nav-link.active::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    opacity: 1;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Remove Bootstrap's default active background */
+.nav-pills .nav-link.active {
+    background-color: transparent !important;
+    color: black !important;
+    border-radius: 0;
+}
+
+/* Add hover effect with an animated underline */
+.nav-pills .nav-link::after {
+    content: ""; 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    opacity: 0; /* Initially hidden */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Expand underline on hover */
+.nav-pills .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1; /* Fade in effect */
+}
+
+
+/* Set background color for the whole page */
+body {
+    background-color: #f2f2f2 !important;
+}
+
+
+/* Initial state: cards are invisible and shifted down */
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active state: cards become visible and slide up */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduce heading size inside the cards */
+/* Make the headings inside the cards bolder */
+.card h3 {
+   
+    font-weight: bolder; /* Make the font weight bolder */
+    
+}
+

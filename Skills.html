@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Initial state: cards are invisible and shifted down */
+        .card {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Active state: cards become visible and slide up */
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+  <header style="position: sticky; top: 0; z-index: 1000; background-color:#f2f2f2;">
+    <div class="container d-flex flex-wrap justify-content-center py-3 mb-4">
+      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4">
+          <img src="img\logo.png" alt="Logo or header image" class="img-fluid" style="height: 50px;" />
+        </span>
+      </a>
+  
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="Skills.html" class="nav-link active" aria-current="page">Skills</a></li>
+        <li class="nav-item"><a href="Projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <main>
+        <div class="container px-4 py-5" id="hanging-icons">
+           
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                
+                <div class="col">
+                    <div class="card shadow-sm p-4">
+                        <h3 class="fs-6 text-body-emphasis">Responsive Web Development</h3>
+                        <p>I specialize in crafting modern, responsive websites using HTML, CSS, and JavaScript, ensuring seamless functionality on all devices.</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="card shadow-sm p-4">
+                        <h3 class="fs-6 text-body-emphasis">User Interface (UI) & Visual Design</h3>
+                        <p>I craft engaging and intuitive interfaces by blending aesthetics with usability. Using Figma and Canva, I create high-fidelity designs.</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="card shadow-sm p-4">
+                        <h3 class="fs-6 text-body-emphasis">User Experience (UX) & Prototyping</h3>
+                        <p>I design user-centered experiences through wireframing, prototyping, and testing to ensure smooth, intuitive navigation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <style>
+            /* Initially hide tool boxes */
+            .tool-card {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            }
+        
+            /* When in view, animate */
+            .tool-card.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+        
+     <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<div class="container px-4 py-2" id="icon-grid">
+    
+
+
+  <div class="swiper mySwiper mt-4">
+    <div class="swiper-wrapper">
+
+      <!-- Tool: HTML -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\html.png" alt="HTML" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">HTML</h3>
+          <p class="mt-1 small">Foundation of web design.</p>
+        </div>
+      </div>
+
+      <!-- Tool: CSS -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\css.png" alt="CSS" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">CSS</h3>
+          <p class="mt-1 small">Styles and layout design.</p>
+        </div>
+      </div>
+
+      <!-- Tool: JavaScript -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\jss.png" alt="JavaScript" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">JavaScript</h3>
+          <p class="mt-1 small">Adds interactivity.</p>
+        </div>
+      </div>
+
+      <!-- Tool: React.js -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\react.png" alt="React.js" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">React.js</h3>
+          <p class="mt-1 small">Component-based UI.</p>
+        </div>
+      </div>
+
+      <!-- Tool: Bootstrap -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\bootstrap.png" alt="Bootstrap" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">Bootstrap</h3>
+          <p class="mt-1 small">Responsive framework.</p>
+        </div>
+      </div>
+
+      <!-- Tool: Figma -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\figma.png" alt="Figma" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">Figma</h3>
+          <p class="mt-1 small">UI/UX design tool.</p>
+        </div>
+      </div>
+
+      <!-- Tool: VS Code -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\vs.jpg" alt="VS Code" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">VS Code</h3>
+          <p class="mt-1 small">Powerful code editor.</p>
+        </div>
+      </div>
+
+      <!-- Tool: Canva -->
+      <div class="swiper-slide">
+        <div class="card shadow-sm p-3 text-center tool-card">
+          <img src="img\canva.jpg" alt="Canva" width="40" height="40">
+          <h3 class="fs-6 text-body-emphasis mt-2">Canva</h3>
+          <p class="mt-1 small">Graphic design tool.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Swiper Controls -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination mt-3"></div>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  new Swiper('.mySwiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      }
+    }
+  });
+
+  function revealOnScroll() {
+    let toolCards = document.querySelectorAll('.tool-card');
+    let windowHeight = window.innerHeight;
+
+    toolCards.forEach(card => {
+      let cardTop = card.getBoundingClientRect().top;
+      if (cardTop < windowHeight - 50) {
+        card.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  document.addEventListener("DOMContentLoaded", revealOnScroll);
+</script>
+
+<style>
+  .swiper {
+    padding: 1.5rem 0;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tool-card {
+    width: 100%;
+    transition: transform 1.8s ease;
+  }
+
+  .tool-card.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .tool-card:not(.show) {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+</style>
+
+        
+        <script>
+            function revealOnScroll() {
+                let toolCards = document.querySelectorAll('.tool-card');
+                let windowHeight = window.innerHeight;
+                
+                toolCards.forEach(card => {
+                    let cardTop = card.getBoundingClientRect().top;
+                    if (cardTop < windowHeight - 50) { // Adjust threshold
+                        card.classList.add("show");
+                    }
+                });
+            }
+        
+            window.addEventListener("scroll", revealOnScroll);
+            document.addEventListener("DOMContentLoaded", revealOnScroll);
+        </script>
+        
+              
+        
+        
+
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cards = document.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("show");
+                }, index * 350); // Staggered delay for smooth effect
+            });
+        });
+    </script>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+        <svg class="bi" width="30" height="24" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 JDesigns</span>
+    </div>
+
+   
+  </footer>
+</div>
+
+
+</body>
+</html>

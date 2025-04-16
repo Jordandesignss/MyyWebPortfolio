@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .card {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-section {
+        background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #ddd; /* Adding a border similar to the card */
+    }
+
+    .profile-img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .about-text h2 {
+      font-weight: bold;
+     
+    }
+ 
+
+    .about-section .about-text h2 {
+  margin-left: -3px;
+}
+
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header/Nav -->
+<header style="position: sticky; top: 0; z-index: 1000; background-color:#f2f2f2;">
+  <div class="container d-flex flex-wrap justify-content-center py-3 mb-4">
+    <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <span class="fs-4">
+        <img src="img\logo.png" alt="Logo or header image" class="img-fluid" style="height: 50px;" />
+      </span>
+    </a>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="About.html" class="nav-link active" aria-current="page">About</a></li>
+      <li class="nav-item"><a href="Skills.html" class="nav-link">Skills</a></li>
+      <li class="nav-item"><a href="Projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+  <!-- About Me Section -->
+  <main>
+    <div class="container py-5">
+      <div class="row align-items-center about-section shadow-sm">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+            <img src="img\jordsss2.jpeg" alt="Your Profile" class="profile-img" style="width: 350px; height: auto;">
+
+        </div>
+        <div class="col-lg-7 about-text">
+          <h2 class="mb-3">About Me</h2>
+          <p>
+            I’m a frontend developer and UI/UX designer based in Cape Town, South Africa. I specialize in building responsive, user-centered websites that blend clean code with thoughtful design. Whether I’m writing HTML, CSS, and JavaScript or mapping out wireframes and user flows, my goal is always to create digital experiences that are intuitive, engaging, and visually compelling.
+          </p>
+          <p>
+            With a background rooted in both design and development, I understand how aesthetics and functionality work hand in hand. I enjoy solving real problems through user-centered design and bringing those solutions to life through sleek, accessible frontend code. I stay inspired by the ever-evolving tech landscape — always learning new tools, exploring UI trends, and refining my process.
+          </p>
+         
+          <div class="d-flex mt-4">
+            <div class="btn-group-mobile">
+              <a href="asset/JordanDavidsonresume.pdf" class="btn btn-outline-secondary" target="_blank">Resume</a>
+              <a href="contact.html" class="btn btn-outline-secondary">Contact</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".about-section");
+      const windowHeight = window.innerHeight;
+
+      function revealAbout() {
+        cards.forEach(card => {
+          const cardTop = card.getBoundingClientRect().top;
+          if (cardTop < windowHeight - 50) {
+            card.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealAbout);
+      revealAbout(); // Run once on load
+    });
+  </script>
+
+<!-- Timeline Section -->
+
+<div class="container about-section text-center">
+    <h2 class="mb-5 fw-bold">My Journey </h2>
+    <!-- Timeline Wrapper -->
+    <div class="timeline-wrapper">
+      <div class="timeline-vertical">
+        <!-- Timeline Line -->
+        <div class="timeline-line-vertical"></div>
+
+        <!-- 1. Plumstead High School -->
+        <div class="timeline-row left">
+          <div class="timeline-item-vertical">
+            <div class="timeline-content-vertical">
+              <h5 class="fw-bold">Matriculated High School</h5>
+              <p class="text-muted">I completed my high school education in 2021 with a Bachelor's pass. This milestone marked the beginning of my journey into the world of design and development.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Started CPUT -->
+        <div class="timeline-row right">
+          <div class="timeline-item-vertical">
+            <div class="timeline-content-vertical">
+              <h5 class="fw-bold">Started Studying At Cape Peninsula University of Technology</h5>
+              <p class="text-muted">2022</p>
+              <p>In 2022, I began studying Application Development: Multimedia. At CPUT, I gained hands-on experience in multimedia design, web development, and application creation. </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. BankSETA Internship -->
+        <div class="timeline-row left">
+          <div class="timeline-item-vertical">
+            <div class="timeline-content-vertical">
+              <h5 class="fw-bold">BankSETA Internship</h5>
+              <p class="text-muted">2024 (6-month contract)</p>
+              <p>During my final year of university, I had the opportunity to work at BankSETA on a real-world client project. This was my first professional experience where I was responsible for creating a fully functional website.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Graduated CPUT -->
+        <div class="timeline-row right">
+          <div class="timeline-item-vertical">
+            <div class="timeline-content-vertical">
+              <h5 class="fw-bold">Graduated At Cape Peninsula University of Technology</h5>
+              <p class="text-muted">2025</p>
+              <p>In 2025, I successfully completed my 3-year National Diploma in Application Development: Multimedia at the Cape Peninsula University of Technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<style>
+
+.btn-outline-secondary:hover {
+        background-color: #007bff; /* Bootstrap primary blue */
+        color: white;
+        border-color: #007bff;
+      }
+
+.container.about-section.text-center {
+  width: 85%; /* Adjust width to your preference */
+  max-width: 1200px; /* Optional: max width */
+  margin: 0 auto; /* Center the container */
+  padding: 4rem 0; /* Adjust padding as needed */
+  max-height: 1480px; /* Optional: max width */
+  margin-bottom: 50px;
+}
+
+
+.about-section h2 {
+  text-align: left; /* Aligns the heading to the left */
+  margin-bottom: 2rem; /* Adjust spacing below the heading */
+  margin-left: 140px;
+}
+
+
+
+/* New wrapper */
+.timeline-wrapper {
+  position: relative;
+  padding: 2rem 0;
+  max-width: 950px; /* made smaller */
+  margin: 0 auto;
+}
+
+.timeline-vertical {
+  position: relative;
+  width: 100%;
+}
+
+.timeline-line-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: #1d7ebe;
+  z-index: 0;
+  height: 950px;
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timeline-row.right {
+  justify-content: flex-end;
+}
+
+.timeline-item-vertical {
+  position: relative;
+  width: 45%;
+  z-index: 1;
+}
+
+.timeline-item-vertical::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: #1d7ebe;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #1d7ebe;
+  z-index: 2;
+}
+
+.timeline-row.left .timeline-item-vertical::before {
+  right: -50px;
+}
+
+.timeline-row.right .timeline-item-vertical::before {
+  left: -50px;
+}
+
+.timeline-content-vertical {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%; /* Ensure it's full width */
+  max-width: 100%; /* Adjusts the maximum width */
+  border: 1px solid #ddd; /* Adding a border similar to the card */
+}
+
+.timeline-content-vertical h5 {
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-content-vertical p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+}
+
+/* Card-like Styling for Timeline Items */
+.timeline-content-vertical {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px; /* Match the card width */
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .timeline-row,
+  .timeline-row.right,
+  .timeline-row.left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-item-vertical {
+    width: 90%;
+    margin-bottom: 1rem; /* smaller gap between boxes */
+  }
+
+  /* Remove the dot */
+  .timeline-item-vertical::before {
+    display: none;
+  }
+
+  /* Remove the vertical line */
+  .timeline-line-vertical {
+    display: none;
+  }
+
+  .about-section{
+    width:90%;
+   margin-left: 20px;
+  }
+
+  .profile-img {
+    display: none;
+  }
+
+}
+
+
+
+</style>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+        <svg class="bi" width="30" height="24" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 JDesigns</span>
+    </div>
+
+   
+  </footer>
+</div>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
